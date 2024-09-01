@@ -1,53 +1,63 @@
 #include <iostream>
 using namespace std;
 
-class Node{
-    public:
+// Insertion at begin
+class Node {
+public:
     int data;
     Node *next;
-    Node(int value){
+    Node(int value) {
         data = value;
         next = NULL;
     }
 };
 
-class LinkedList{
-    Node * head;
-    public:
-    LinkedList(){
-     head=NULL;
+class LinkedList {
+    Node *head;
+public:
+    LinkedList() {
+        head = NULL;
     }
+
     void creatingLinkedlist()
-        
     {
-       int array[]={10,20,30,40};
-      
-       Node * tail;
-       if(head == NULL) {
-           head = new Node(array[i]);
-           tail = head;
-       }
-       for(int i=1;i<4;i++){
-           tail->next = new Node(array[i]);
-           tail = tail->next;
-       }
+        Node *firstnode = new Node(10);
+        head = firstnode;
+        Node *secondnode = new Node(20);
+        firstnode->next = secondnode;
+        Node *thirdnode = new Node(30);
+        secondnode->next = thirdnode;
+        Node *fourthnode = new Node(40);
+        thirdnode->next = fourthnode;
+        fourthnode->next = NULL;
     }
+
     void displayingLinkedlist()
     {
-      Node * temp;
-      temp=head;
-      while(temp!=NULL){
-        cout<<temp->data<<" ";
-        temp=temp->next;
-
-      }
-    
+        Node *temp = head;
+        while (temp != NULL)
+        {
+            cout << temp->data << "->";
+            temp = temp->next;
+        }
+        cout << "NULL" << endl;
     }
-    
-};
-int main(){
-   LinkedList list;
-   list.creatingLinkedlist();
 
-   list.displayingLinkedlist();
+    void insertionatend()
+    {
+        Node *tail=head;
+        while(tail->next!=NULL)
+        {
+            tail=tail->next;
+        }
+        tail->next= new Node(5);
+    }
+};
+
+int main() {
+    LinkedList list;
+    list.creatingLinkedlist();
+    list.insertionatend();
+    list.displayingLinkedlist();
+    return 0;
 }
