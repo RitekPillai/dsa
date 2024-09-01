@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-
+//insertion
 class Node{
     public:
     int data;
