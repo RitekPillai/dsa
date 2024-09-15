@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/DataStructure",
-      "program": "d:/DataStructure/build/Debug/outDebug",
+      "cwd": "d:/DataStructure/LinkedListInsertion",
+      "program": "d:/DataStructure/LinkedListInsertion/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
