@@ -48,6 +48,9 @@ class LinkedList{
         {
             cout<<"Element"<<current->data<<"\n";
             current=current->next;
+    
+
+
         }
 
     }
@@ -59,5 +62,6 @@ int main(){
 
     LinkedList l;
     l.CreatingLinkedList();
+
     l.DisplayingLinkedList();
 }

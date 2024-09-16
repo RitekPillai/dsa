@@ -96,6 +96,7 @@ int main(){
     int value;
     cin>>value;
     obj.Inerstionatparticularlocation(loc,value);
+    break;
     default:
         break;
     }

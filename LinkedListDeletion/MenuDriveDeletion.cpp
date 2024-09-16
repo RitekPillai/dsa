@@ -70,6 +70,15 @@ class LinkedList{
      currentnode->next=temp2;
    
 
+
+    }
+    void Circularlinkedlist(){
+      Node * currentnode = head;
+      while (currentnode->next != head) {
+        currentnode = currentnode->next;
+
+      }
+      
     }
 
     };
@@ -88,24 +97,25 @@ int main(){
     {
     case 1:
       obj.Deletionatbegin();
-      obj.DisplayingLinkedList();
+
       break;
     case 2:
       obj.Deletionatend();
-      obj.DisplayingLinkedList();
+
       break;
     case 3:
     cout<<"Enter the postion you want to Delete"<<endl;
     int pos;
     cin>>pos;
     obj.DeletionAtParticularLocation(pos);
-          obj.DisplayingLinkedList();
+
           break;
 
     default:
     cout << "Invalid choice" << endl;
       break;
     }
+              obj.DisplayingLinkedList();
   
     
 }
