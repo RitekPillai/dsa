@@ -1,19 +1,14 @@
 #include <iostream>
 using namespace std;
 
-     void insert(int array[],int size){
-    int value;
-    cout<<"Enter the value you want to insert into the array"<<endl;
-    cin>>value;
-    cout<<"Enter the postion you want to insert the array"<<endl;
-    int post;
-    cin>>post;
-    for(int i = size-1;i>=post;i--){
-       array[i+1]=array[i];
 
+ void deletion(int array[],int size){
+    cout<<"Enter the position you want to delete from the array"<<endl;
+    int pos;    
+    cin>>pos;
+    for(int i = pos;i<=size-1;i++){
+        array[i]=array[i+1];
     }
-    array[post]=value;
-
 
  }
  
@@ -32,11 +27,14 @@ int main(){
     for(int i =0;i<n;i++){
         cin>>array[i];
     }
-    cout<<"Before the insertion"<<endl;
+
+    cout<<"Before Deletion:"<<endl;
     display(array,n);
-    cout<<"After the insertion:"<<endl;
-    insert(array,n);
-    n++;
+    cout<<endl;
+    
+    deletion(array,n);
+    n=n-1;
+    cout<<"After the Deletion"<<endl;
     display(array,n);
 
 }
