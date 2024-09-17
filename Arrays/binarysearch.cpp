@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 
-// Function to perform binary search
 void Binarysearch(int array[], int size) {
     int element;
     cout << "Enter the value you want to search: ";
