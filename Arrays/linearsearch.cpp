@@ -6,11 +6,18 @@ void Linearsearch(int array[],int size){
     int search;
     cout<<"Enter the value you want search"<<endl;
     cin>>search;
+    bool found;
 
     for(int i =0;i<size;i++){
         if(array[i]==search){
             cout<<"Element is present at index "<<i<<endl;
+            found = true;
+            break;
         }
+       
+    }
+    if(found==false){
+        cout<<"Element is not present in array"<<endl;
     }
 
 }
