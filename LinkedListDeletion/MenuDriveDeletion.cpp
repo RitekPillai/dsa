@@ -80,7 +80,10 @@ class LinkedList{
 
 int main(){
     LinkedList obj;
-
+         obj.CreatingALinkedList();
+         cout<<"Before Operations:"<<endl;
+    obj.DisplayingLinkedList();
+    cout<<endl;
     cout<<"1.Deletion At Begin"<<endl;
     cout<<"2.Deletion At End"<<endl;
     cout<<"3.Deletion At Particular Location"<<endl;
@@ -91,17 +94,17 @@ int main(){
     switch (num)
     {
     case 1:
-     obj.CreatingALinkedList();
+
       obj.Deletionatbegin();
 
       break;
     case 2:
-     obj.CreatingALinkedList();
-      obj.Deletionatend();
+     obj.Deletionatend();
+ 
 
       break;
     case 3:
-     obj.CreatingALinkedList();
+
     cout<<"Enter the postion you want to Delete"<<endl;
     int pos;
     cin>>pos;
@@ -113,7 +116,7 @@ int main(){
     default:
     cout << "Invalid choice" << endl;
       break;
-    }
+    }       cout<<"After Operations:"<<endl;
               obj.DisplayingLinkedList();
   
     

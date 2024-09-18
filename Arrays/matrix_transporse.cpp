@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-void transpose(int array[10][10], int row , int column){
+void transpose(){
     for(int i =0;i<row;i++){
         for(int j=0;j<column;j++){
             cout<<array[j][i]<<" ";
