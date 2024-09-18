@@ -14,7 +14,8 @@ class LinkedList{
     public:
     Node * head=NULL;
     void CreatingALinkedList(){
-        Node * FirstNode = new Node(10);
+
+            Node * FirstNode = new Node(10);
         head=FirstNode;
           Node * SecoundNode = new Node(20);
         FirstNode->next=SecoundNode;
@@ -72,41 +73,39 @@ class LinkedList{
 
 
     }
-    void Circularlinkedlist(){
-      Node * currentnode = head;
-      while (currentnode->next != head) {
-        currentnode = currentnode->next;
 
-      }
-      
-    }
 
     };
 
 
 int main(){
     LinkedList obj;
-    obj.CreatingALinkedList();
+
     cout<<"1.Deletion At Begin"<<endl;
     cout<<"2.Deletion At End"<<endl;
     cout<<"3.Deletion At Particular Location"<<endl;
+       
    
     int num;
     cin>>num;
     switch (num)
     {
     case 1:
+     obj.CreatingALinkedList();
       obj.Deletionatbegin();
 
       break;
     case 2:
+     obj.CreatingALinkedList();
       obj.Deletionatend();
 
       break;
     case 3:
+     obj.CreatingALinkedList();
     cout<<"Enter the postion you want to Delete"<<endl;
     int pos;
     cin>>pos;
+
     obj.DeletionAtParticularLocation(pos);
 
           break;
