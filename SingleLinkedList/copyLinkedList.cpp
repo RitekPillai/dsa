@@ -15,7 +15,7 @@ class LinkedList{
     Node * head=NULL;
     void CreatingALinkedList(){
 
-            Node * FirstNode = new Node(10);
+            Node * Node1 = new Node(10);
         head=FirstNode;
           Node * SecoundNode = new Node(20);
         FirstNode->next=SecoundNode;
