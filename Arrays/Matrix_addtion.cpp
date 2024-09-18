@@ -31,10 +31,7 @@ int main(){
         for(int j=0;j<column;j++){
             cout<<m3[i][j]<<" ";
         }
-<<<<<<< HEAD
         cout<<endl;
-=======
-         cout<<endl;
->>>>>>> c61fd9d9711a1ea8464702ac8b1fcfd47435e563
+
     }
 }

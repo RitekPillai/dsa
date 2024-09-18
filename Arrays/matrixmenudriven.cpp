@@ -121,7 +121,7 @@ void addtionofmatrix(){
 
 int main(){
 
-
+do{
     cout<<"1.Tranpose"<<endl;
     cout<<"2.Multiplication"<<endl;
     cout<<"3.Addition"<<endl;
@@ -145,4 +145,5 @@ int main(){
     default:
         break;
     }
+}while
 }
