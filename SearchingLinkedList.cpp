@@ -29,16 +29,47 @@ class LinkedList{
         Fourthnode->next=Fivethnode;
         Fivethnode= NULL;
     }
-    void Insertion(){
-      
+        void DisplayingLinkedList(){
+     Node * currentnode = head;
+     while (currentnode != NULL) {
+        cout<<currentnode->data<<"->";
+        currentnode=currentnode->next;
+    }
+    cout<<"NULL";
+    }
+    void searching(int info){
+        bool found;
+        Node * currentnode = head;
+        int count;
+        while (currentnode!=NULL)
+        {
+            if(currentnode->data == info){
+                cout<<"Element is found at "<<count<<endl;
+                found=true;
+                break;
+                
+            }
+            
+            currentnode=currentnode->next;
+            count++;
+        }
+        if(!found){
+            cout<<"Element not found"<<endl;
+        }
 
     }
-    
 };
 int main(){
     LinkedList obj;
     obj.CreatingLinkedList();
-   
+    cout<<"LinkedList:"<<endl;
+   obj.DisplayingLinkedList();
+   cout<<endl;
+  
+   cout<<"Enter the value you want to Search"<<endl;
+   int search;
+   cin>>search;
+   obj.searching(search);
  
 
  return 0;
