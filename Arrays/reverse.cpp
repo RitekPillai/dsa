@@ -3,14 +3,14 @@ using namespace std;
 
 
 void reverse(int array[],int size){
-    for(int i=size-1;i<=0;i--){
+    for(int i=size-1;i>=0;i--){
         cout<<array[i]<<" ";
     }
 }
 int main(){
     int array[100];
     int n;
-    cout<<"Enter how many element you want to enter i a array"<<endl;
+    cout<<"Enter how many element you want to enter a array"<<endl;
     cin>>n;
 
     cout<<"Enter a  Array"<<endl;
