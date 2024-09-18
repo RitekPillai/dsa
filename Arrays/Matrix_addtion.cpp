@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-addtionofmatrix(int m1[10][10],int m2[10][10],int m3[10][10],int row ,int column){
+void addtionofmatrix(int m1[10][10],int m2[10][10],int m3[10][10],int row ,int column){
     cout<<"Addition of M1 and M2"<<endl;
     for(int i=0;i<row;i++){
         for(int j=0;j<column;j++){
@@ -29,7 +29,8 @@ int main(){
     addtionofmatrix(m1, m2 , m3, row , column);
      for(int i =0;i<row;i++){
         for(int j=0;j<column;j++){
-            cout<<m3[i][j];
+            cout<<m3[i][j]<<" ";
         }
+         cout<<endl;
     }
 }
