@@ -48,6 +48,7 @@
             newnode->next = head;
             newnode->prev=NULL;
             head=newnode;
+            
     
         }}
         void displaying(){
@@ -78,15 +79,57 @@
     }
 
     void insertatparticularpos(int pos){
-        Node * newnode = new Node(70);
+     
+        Node * currentnode = head;
         
-    }
+
+        if(pos==0){
+           if(head==NULL){
+            head = new Node(5);
+           }else{
+            Node * newnode = new Node(5);
+            newnode -> next = head;
+            head->prev=newnode;
+            head=newnode;
+           }
+        }
+        else{   
+        while (--pos)
+        {
+            currentnode = currentnode->next;
+        }//insert at end
+        if(currentnode->next == NULL){ //last node
+            Node * temp = new Node(5);
+            temp->prev=currentnode;
+            currentnode->next=temp; 
+            temp->next= NULL;
+
+
+
+        }
+        //insert at middle
+        else{
+           Node * temp = new Node(5);
+           //next node of the currentnode = temp -> next
+        temp->next=currentnode->next;   
+        //prev node = currentnode
+        temp->prev=currentnode;  
+        //current node next is new node   
+        currentnode->next=temp;
+        // temp-> next means next node then prev of that node is equal temp
+        temp->next->prev=temp;
+    
+        }
+    }}
     };
     int main(){
         LinkedList l;
         l.creatingLinkedList();
-        l.insertatbegin();
-        l.insertatend();
+          l.displaying();
+          cout<<endl;
+       // l.insertatbegin();
+       // l.insertatend();
+       l.insertatparticularpos(5);
         l.displaying();
         cout<<endl;
 
