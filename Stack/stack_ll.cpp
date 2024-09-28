@@ -1,16 +1,14 @@
 #include<iostream>
 using namespace std;
-
 class Node{
-    public:
     int data;
     Node * next;
     Node(int value){
         data=value;
         next=NULL;
+
     }
 };
-
 class stack{
     public:
     Node * top;
@@ -21,32 +19,21 @@ class stack{
     }
 
     void push(int value){
-        Node * temp= new Node(value);
+
+        Node * temp= new newNode(value);
         temp->next=top;
         top=temp;
         size++;
+        cout<<value<<endl;
     }
-
     void pop(){
         if(top==NULL){
             cout<<"Stack is empty"<<endl;
         }else{
-            Node * temp = top;
-            top=top->next;
-            cout<<temp->data<<" is popped"<<endl;
-            delete temp;
-            size--; 
-        }
-    }
-
-    void display(){
-        Node * temp = top; 
-     
-        while(temp != NULL){
-            cout<<temp->data<<endl;
-            temp=temp->next;
-        }
-    }
+        Node * temp = top;
+        top=top->next;
+        delete temp;
+    }}
 };
 
 int main(){
@@ -57,10 +44,5 @@ int main(){
         cin>>values;
         s.push(values);
     }
-    cout<<"Stack elements: "<<endl;
-    s.display();
     s.pop();
-    cout<<"Stack elements after pop: "<<endl;
-    s.display();
-    return 0;
 }
